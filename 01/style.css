@@ -1,0 +1,55 @@
+
+/* 
+
+this css takes panel class and expands panel active
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Iosevka Amono v2";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color:aliceblue;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 2px;
+    position: relative;
+    transition: flex 0.1s ease-in;
+}
+
+.panel h3{
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    /* show when active */
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+}
